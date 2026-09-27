@@ -15,6 +15,8 @@ Want → History → Solutions → Sources → Access → Frontier
 需要 Node.js 22.9+。应用没有第三方运行依赖。
 
 ```bash
+git clone https://github.com/aicuc/before-you-build.git
+cd before-you-build
 npm start
 ```
 
@@ -73,7 +75,7 @@ Skill 不会自动申请权益、创建外部仓库或发布私人想法。使�
 
 此版本面向本机使用；不带用户认证、共享限流或多租户隔离。默认 `HOST=127.0.0.1`。如果将带模型密钥的服务发布到外网，应先增加认证、配额和反向代理。静态文件采用显式白名单，不会暴露源代码或环境文件。
 
-本仓库已准备开源所需的许可、贡献说明和案例，但不包含已创建的 GitHub 远程仓库。发布时只提交公开案例与代码，检查不含私人想法或密钥。
+公开仓库：[aicuc/before-you-build](https://github.com/aicuc/before-you-build)。贡献时只提交公开案例与代码，检查不含私人想法或密钥。
 
 参见 [方法论](docs/methodology.md)、[数据模型](docs/data-model.md)、[贡献说明](CONTRIBUTING.md)。
 
