@@ -1,4 +1,4 @@
-# Before You Build
+# Sourcever
 
 **Don't build from zero. Build from where humanity stopped.**
 
@@ -15,8 +15,8 @@ Want → History → Solutions → Sources → Access → Frontier
 需要 Node.js 22.9+。应用没有第三方运行依赖。
 
 ```bash
-git clone https://github.com/aicuc/before-you-build.git
-cd before-you-build
+git clone https://github.com/aicuc/sourcever.git
+cd sourcever
 npm start
 ```
 
@@ -61,7 +61,7 @@ tests/                    Node 原生测试
 
 ## 作为 Skill 使用
 
-仓库根目录 `SKILL.md` 是入口。可将本仓库复制到支持目录型 Skill 的助手的 `skills/before-you-build/` 下；至少保留 `SKILL.md`、`docs/methodology.md`、`docs/data-model.md` 和 `examples/`。也可以直接让助手阅读根目录 SKILL.md 后对你的需求应用该方法。
+仓库根目录 `SKILL.md` 是入口。可将本仓库复制到支持目录型 Skill 的助手的 `skills/sourcever/` 下；至少保留 `SKILL.md`、`docs/methodology.md`、`docs/data-model.md` 和 `examples/`。也可以直接让助手阅读根目录 SKILL.md 后对你的需求应用该方法。
 
 Skill 不会自动申请权益、创建外部仓库或发布私人想法。使用的工具取决于宿主提供的能力。
 
@@ -75,7 +75,7 @@ Skill 不会自动申请权益、创建外部仓库或发布私人想法。使�
 
 此版本面向本机使用；不带用户认证、共享限流或多租户隔离。默认 `HOST=127.0.0.1`。如果将带模型密钥的服务发布到外网，应先增加认证、配额和反向代理。静态文件采用显式白名单，不会暴露源代码或环境文件。
 
-公开仓库：[aicuc/before-you-build](https://github.com/aicuc/before-you-build)。贡献时只提交公开案例与代码，检查不含私人想法或密钥。
+公开仓库：[aicuc/sourcever](https://github.com/aicuc/sourcever)。贡献时只提交公开案例与代码，检查不含私人想法或密钥。
 
 参见 [方法论](docs/methodology.md)、[数据模型](docs/data-model.md)、[贡献说明](CONTRIBUTING.md)。
 

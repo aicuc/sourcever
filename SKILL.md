@@ -1,9 +1,9 @@
 ---
-name: before-you-build
+name: sourcever
 description: 在用户提出新产品或工具想法、希望了解现成方案时，研究底层需求、历史演化、失败路线、可复用资源、一手来源和未解决边界，再帮助形成验证计划或 MVP。适用于创造前的探索，不阻挡用户已明确授权的实现或简单修复。
 ---
 
-# Before You Build
+# Sourcever
 
 先继承人类已经完成的部分，再创造下一部分。
 
