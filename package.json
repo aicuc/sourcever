@@ -1,0 +1,10 @@
+{
+  "name": "before-you-build",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Explore what humanity has already built before creating something new.",
+  "engines": { "node": ">=22.9" },
+  "scripts": { "dev": "node --env-file-if-exists=.env server.mjs", "start": "node --env-file-if-exists=.env server.mjs", "test": "node --test", "check": "node scripts/validate.mjs" },
+  "license": "MIT"
+}

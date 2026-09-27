@@ -1,0 +1,1674 @@
+[
+  {
+    "id": "website",
+    "title": "网站搭建",
+    "want": "我想快速搭建一个网站",
+    "need": "把信息或服务发布到网络，让他人可以稳定访问。",
+    "keywords": [
+      "网站",
+      "建站",
+      "网页",
+      "website",
+      "landing",
+      "部署"
+    ],
+    "summary": "先继承已经成熟的能力，再把精力放在仍未解决的问题上。",
+    "nodes": [
+      {
+        "id": "website-s0",
+        "name": "超文本网页",
+        "era": "1990s",
+        "solves": "让文档通过链接公开访问",
+        "limitation": "内容更新需要手动维护",
+        "representative": "HTML / HTTP",
+        "sourceIds": [
+          "web-history"
+        ],
+        "lane": 0,
+        "stage": 0,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "浏览器与网络协议形成通用发布界面"
+      },
+      {
+        "id": "website-s1",
+        "name": "动态网站",
+        "era": "1990s–2000s",
+        "solves": "按请求生成内容与处理表单",
+        "limitation": "需要维护服务端和数据库",
+        "representative": "服务端应用",
+        "sourceIds": [
+          "mdn"
+        ],
+        "lane": 0,
+        "stage": 1,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "服务端处理使页面从文档变成应用"
+      },
+      {
+        "id": "website-s2",
+        "name": "内容管理系统",
+        "era": "2000s 起",
+        "solves": "让非开发者维护网站内容",
+        "limitation": "插件兼容与维护成本",
+        "representative": "WordPress",
+        "sourceIds": [
+          "wordpress"
+        ],
+        "lane": 0,
+        "stage": 2,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "内容与模板分离降低编辑门槛"
+      },
+      {
+        "id": "website-s3",
+        "name": "静态托管",
+        "era": "2010s 普及",
+        "solves": "从代码仓库发布静态页面",
+        "limitation": "动态能力需要外部服务",
+        "representative": "GitHub Pages",
+        "sourceIds": [
+          "pages"
+        ],
+        "lane": 1,
+        "stage": 3,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "版本管理与自动部署减少手工发布"
+      },
+      {
+        "id": "website-s4",
+        "name": "组合式网站",
+        "era": "当代路线",
+        "solves": "把托管、内容和 API 组合成服务",
+        "limitation": "跨服务权限与数据流更复杂",
+        "representative": "托管 + API",
+        "sourceIds": [
+          "mdn"
+        ],
+        "lane": 0,
+        "stage": 4,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "API 分工让成熟能力可被组合"
+      },
+      {
+        "id": "website-s5",
+        "name": "AI 辅助建站",
+        "era": "探索中",
+        "solves": "缩短从需求到页面的制作过程",
+        "limitation": "生成结果仍需验收与维护",
+        "representative": "生成式开发工作流",
+        "sourceIds": [
+          "mdn"
+        ],
+        "lane": 0,
+        "stage": 5,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "生成模型降低原型制作门槛，但可靠性仍需验证"
+      }
+    ],
+    "edges": [
+      {
+        "fromId": "website-s0",
+        "toId": "website-s1",
+        "type": "evolved_into",
+        "why": "服务端处理使页面从文档变成应用",
+        "oldCapability": "让文档通过链接公开访问",
+        "oldLimit": "内容更新需要手动维护",
+        "newCapability": "按请求生成内容与处理表单",
+        "newProblem": "需要维护服务端和数据库",
+        "sourceIds": [
+          "mdn"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "website-s1",
+        "toId": "website-s2",
+        "type": "evolved_into",
+        "why": "内容与模板分离降低编辑门槛",
+        "oldCapability": "按请求生成内容与处理表单",
+        "oldLimit": "需要维护服务端和数据库",
+        "newCapability": "让非开发者维护网站内容",
+        "newProblem": "插件兼容与维护成本",
+        "sourceIds": [
+          "wordpress"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "website-s1",
+        "toId": "website-s3",
+        "type": "forked_into",
+        "why": "版本管理与自动部署减少手工发布",
+        "oldCapability": "按请求生成内容与处理表单",
+        "oldLimit": "需要维护服务端和数据库",
+        "newCapability": "从代码仓库发布静态页面",
+        "newProblem": "动态能力需要外部服务",
+        "sourceIds": [
+          "pages"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "website-s2",
+        "toId": "website-s4",
+        "type": "evolved_into",
+        "why": "API 分工让成熟能力可被组合",
+        "oldCapability": "让非开发者维护网站内容",
+        "oldLimit": "插件兼容与维护成本",
+        "newCapability": "把托管、内容和 API 组合成服务",
+        "newProblem": "跨服务权限与数据流更复杂",
+        "sourceIds": [
+          "mdn"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "website-s3",
+        "toId": "website-s4",
+        "type": "evolved_into",
+        "why": "API 分工让成熟能力可被组合",
+        "oldCapability": "从代码仓库发布静态页面",
+        "oldLimit": "动态能力需要外部服务",
+        "newCapability": "把托管、内容和 API 组合成服务",
+        "newProblem": "跨服务权限与数据流更复杂",
+        "sourceIds": [
+          "mdn"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "website-s4",
+        "toId": "website-s5",
+        "type": "evolved_into",
+        "why": "生成模型降低原型制作门槛，但可靠性仍需验证",
+        "oldCapability": "把托管、内容和 API 组合成服务",
+        "oldLimit": "跨服务权限与数据流更复杂",
+        "newCapability": "缩短从需求到页面的制作过程",
+        "newProblem": "生成结果仍需验收与维护",
+        "sourceIds": [
+          "mdn"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      }
+    ],
+    "resourceIds": [
+      "website-r0",
+      "website-r1"
+    ],
+    "sourceIds": [
+      "web-history",
+      "mdn",
+      "wordpress",
+      "pages",
+      "flash"
+    ],
+    "failures": [
+      {
+        "name": "Adobe Flash Player",
+        "when": "2020 · 结束更新与分发",
+        "promise": "为浏览器带来丰富互动内容。",
+        "innovation": "在早期 Web 提供统一多媒体运行环境。",
+        "outcome": "主流 Web 内容迁向开放格式。",
+        "reason": "Adobe 官方指出 HTML5、WebGL 等开放标准成熟。",
+        "lesson": "这更接近平台原生能力替代；不能把曾经有效的技术路线简单归为错误。",
+        "sourceIds": [
+          "flash"
+        ]
+      }
+    ],
+    "failureNote": "尚未补充经过来源核验的失败案例；不以推测填充。",
+    "frontier": {
+      "mature": [
+        "静态发布",
+        "内容管理"
+      ],
+      "growing": [
+        "AI 辅助构建",
+        "跨服务编排"
+      ],
+      "gaps": [
+        {
+          "title": "跨平台迁移",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "持续维护的可理解性",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "生成页面的可访问性",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        }
+      ]
+    },
+    "mode": "curated",
+    "updatedAt": "2026-09-27"
+  },
+  {
+    "id": "collaboration",
+    "title": "团队协作",
+    "want": "我想做一个团队在线文档工具",
+    "need": "让多人跨地点共同创建、修改、同步和管理信息。",
+    "keywords": [
+      "协作",
+      "团队",
+      "文档",
+      "collaboration",
+      "远程"
+    ],
+    "summary": "先继承已经成熟的能力，再把精力放在仍未解决的问题上。",
+    "nodes": [
+      {
+        "id": "collaboration-s0",
+        "name": "文件与邮件附件",
+        "era": "早期数字办公",
+        "solves": "跨地点交换文件",
+        "limitation": "副本增多，难以确认最终版本",
+        "representative": "邮件附件",
+        "sourceIds": [
+          "docs"
+        ],
+        "lane": 0,
+        "stage": 0,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "数字网络替代物理传递"
+      },
+      {
+        "id": "collaboration-s1",
+        "name": "共享文件空间",
+        "era": "网络办公阶段",
+        "solves": "集中存放团队文件",
+        "limitation": "编辑与访问仍需协调",
+        "representative": "文件服务器",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "lane": 0,
+        "stage": 1,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "共享存储减少散落副本"
+      },
+      {
+        "id": "collaboration-s2",
+        "name": "在线协作文档",
+        "era": "2000s 起",
+        "solves": "多人共同编辑同一份内容",
+        "limitation": "离线能力和细粒度权限存在取舍",
+        "representative": "Google Docs",
+        "sourceIds": [
+          "docs"
+        ],
+        "lane": 0,
+        "stage": 2,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "浏览器编辑与同步使共同写作成为可能"
+      },
+      {
+        "id": "collaboration-s3",
+        "name": "自托管协作",
+        "era": "并行路线",
+        "solves": "让组织掌握数据存放与部署",
+        "limitation": "组织承担运维与升级工作",
+        "representative": "Nextcloud / Etherpad",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "lane": 1,
+        "stage": 3,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "开源部署满足组织的数据控制需求"
+      },
+      {
+        "id": "collaboration-s4",
+        "name": "团队工作空间",
+        "era": "当代路线",
+        "solves": "整合文档、文件和沟通上下文",
+        "limitation": "工具之间数据仍可能割裂",
+        "representative": "内容协作平台",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "lane": 0,
+        "stage": 4,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "单一文档扩展为团队内容工作流"
+      },
+      {
+        "id": "collaboration-s5",
+        "name": "AI 协作助手",
+        "era": "探索中",
+        "solves": "辅助提炼和生成团队内容",
+        "limitation": "出处、权限继承和事实核对",
+        "representative": "文档内 AI 辅助",
+        "sourceIds": [
+          "docs"
+        ],
+        "lane": 0,
+        "stage": 5,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "生成模型引入摘要与内容辅助，判断责任仍在人"
+      }
+    ],
+    "edges": [
+      {
+        "fromId": "collaboration-s0",
+        "toId": "collaboration-s1",
+        "type": "evolved_into",
+        "why": "共享存储减少散落副本",
+        "oldCapability": "跨地点交换文件",
+        "oldLimit": "副本增多，难以确认最终版本",
+        "newCapability": "集中存放团队文件",
+        "newProblem": "编辑与访问仍需协调",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "collaboration-s1",
+        "toId": "collaboration-s2",
+        "type": "evolved_into",
+        "why": "浏览器编辑与同步使共同写作成为可能",
+        "oldCapability": "集中存放团队文件",
+        "oldLimit": "编辑与访问仍需协调",
+        "newCapability": "多人共同编辑同一份内容",
+        "newProblem": "离线能力和细粒度权限存在取舍",
+        "sourceIds": [
+          "docs"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "collaboration-s1",
+        "toId": "collaboration-s3",
+        "type": "forked_into",
+        "why": "开源部署满足组织的数据控制需求",
+        "oldCapability": "集中存放团队文件",
+        "oldLimit": "编辑与访问仍需协调",
+        "newCapability": "让组织掌握数据存放与部署",
+        "newProblem": "组织承担运维与升级工作",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "collaboration-s2",
+        "toId": "collaboration-s4",
+        "type": "evolved_into",
+        "why": "单一文档扩展为团队内容工作流",
+        "oldCapability": "多人共同编辑同一份内容",
+        "oldLimit": "离线能力和细粒度权限存在取舍",
+        "newCapability": "整合文档、文件和沟通上下文",
+        "newProblem": "工具之间数据仍可能割裂",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "collaboration-s3",
+        "toId": "collaboration-s4",
+        "type": "evolved_into",
+        "why": "单一文档扩展为团队内容工作流",
+        "oldCapability": "让组织掌握数据存放与部署",
+        "oldLimit": "组织承担运维与升级工作",
+        "newCapability": "整合文档、文件和沟通上下文",
+        "newProblem": "工具之间数据仍可能割裂",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "collaboration-s4",
+        "toId": "collaboration-s5",
+        "type": "evolved_into",
+        "why": "生成模型引入摘要与内容辅助，判断责任仍在人",
+        "oldCapability": "整合文档、文件和沟通上下文",
+        "oldLimit": "工具之间数据仍可能割裂",
+        "newCapability": "辅助提炼和生成团队内容",
+        "newProblem": "出处、权限继承和事实核对",
+        "sourceIds": [
+          "docs"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      }
+    ],
+    "resourceIds": [
+      "collaboration-r0",
+      "collaboration-r1",
+      "collaboration-r2"
+    ],
+    "sourceIds": [
+      "docs",
+      "nextcloud",
+      "etherpad"
+    ],
+    "failures": [
+      {
+        "name": "Google Wave",
+        "when": "2009–2010",
+        "promise": "把消息与共同编辑放进同一个协作空间。",
+        "innovation": "尝试让交流与文档共享同一实时上下文。",
+        "outcome": "Google 停止将其作为独立产品继续开发。",
+        "reason": "官方说明用户采用率未达到预期。",
+        "lesson": "不能由此断言实时协作方向错误；官方表示会在其他项目中复用技术。",
+        "sourceIds": [
+          "wave"
+        ]
+      }
+    ],
+    "failureNote": "尚未补充经过来源核验的失败案例；不以推测填充。",
+    "frontier": {
+      "mature": [
+        "共同编辑",
+        "版本记录"
+      ],
+      "growing": [
+        "本地优先协作",
+        "AI 内容辅助"
+      ],
+      "gaps": [
+        {
+          "title": "跨工具权限继承",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "AI 摘要的来源可追溯性",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "离线修改后的冲突解释",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        }
+      ]
+    },
+    "mode": "curated",
+    "updatedAt": "2026-09-27"
+  },
+  {
+    "id": "cloud-storage",
+    "title": "云存储",
+    "want": "我想自动备份重要文件",
+    "need": "让重要文件可恢复，并能在需要的设备上访问。",
+    "keywords": [
+      "文件",
+      "云存储",
+      "备份",
+      "网盘",
+      "同步",
+      "storage"
+    ],
+    "summary": "先继承已经成熟的能力，再把精力放在仍未解决的问题上。",
+    "nodes": [
+      {
+        "id": "cloud-storage-s0",
+        "name": "本地存储",
+        "era": "早期数字计算",
+        "solves": "在个人设备保存数据",
+        "limitation": "设备损坏可能导致数据丢失",
+        "representative": "磁盘",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "lane": 0,
+        "stage": 0,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "数字文件成为日常信息载体"
+      },
+      {
+        "id": "cloud-storage-s1",
+        "name": "外置备份",
+        "era": "并行路线",
+        "solves": "保存额外恢复副本",
+        "limitation": "手动执行容易遗漏",
+        "representative": "外置磁盘",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "lane": 1,
+        "stage": 1,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "复制到独立介质降低单点故障"
+      },
+      {
+        "id": "cloud-storage-s2",
+        "name": "网络文件服务器",
+        "era": "网络办公阶段",
+        "solves": "让多台设备访问集中存储",
+        "limitation": "依赖网络和管理员维护",
+        "representative": "文件服务器 / NAS",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "lane": 0,
+        "stage": 2,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "局域网使存储可以共享"
+      },
+      {
+        "id": "cloud-storage-s3",
+        "name": "云端文件空间",
+        "era": "2000s 起",
+        "solves": "减少自建远程存储的运维负担",
+        "limitation": "依赖服务提供方与账号安全",
+        "representative": "托管文件服务",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "lane": 0,
+        "stage": 3,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "远程服务把硬件维护交给提供方"
+      },
+      {
+        "id": "cloud-storage-s4",
+        "name": "多设备同步",
+        "era": "当代路线",
+        "solves": "自动分发设备间的文件变更",
+        "limitation": "误删也会同步，仍需要备份",
+        "representative": "Nextcloud 客户端",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "lane": 0,
+        "stage": 4,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "同步客户端自动传播变更"
+      },
+      {
+        "id": "cloud-storage-s5",
+        "name": "内容协作空间",
+        "era": "当代路线",
+        "solves": "在文件之上建立协作流程",
+        "limitation": "权限和迁移复杂度上升",
+        "representative": "Nextcloud Hub",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "lane": 0,
+        "stage": 5,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "文件共享进一步融合在线编辑与沟通"
+      }
+    ],
+    "edges": [
+      {
+        "fromId": "cloud-storage-s0",
+        "toId": "cloud-storage-s1",
+        "type": "evolved_into",
+        "why": "复制到独立介质降低单点故障",
+        "oldCapability": "在个人设备保存数据",
+        "oldLimit": "设备损坏可能导致数据丢失",
+        "newCapability": "保存额外恢复副本",
+        "newProblem": "手动执行容易遗漏",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "cloud-storage-s1",
+        "toId": "cloud-storage-s2",
+        "type": "evolved_into",
+        "why": "局域网使存储可以共享",
+        "oldCapability": "保存额外恢复副本",
+        "oldLimit": "手动执行容易遗漏",
+        "newCapability": "让多台设备访问集中存储",
+        "newProblem": "依赖网络和管理员维护",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "cloud-storage-s1",
+        "toId": "cloud-storage-s3",
+        "type": "forked_into",
+        "why": "远程服务把硬件维护交给提供方",
+        "oldCapability": "保存额外恢复副本",
+        "oldLimit": "手动执行容易遗漏",
+        "newCapability": "减少自建远程存储的运维负担",
+        "newProblem": "依赖服务提供方与账号安全",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "cloud-storage-s2",
+        "toId": "cloud-storage-s4",
+        "type": "evolved_into",
+        "why": "同步客户端自动传播变更",
+        "oldCapability": "让多台设备访问集中存储",
+        "oldLimit": "依赖网络和管理员维护",
+        "newCapability": "自动分发设备间的文件变更",
+        "newProblem": "误删也会同步，仍需要备份",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "cloud-storage-s3",
+        "toId": "cloud-storage-s4",
+        "type": "evolved_into",
+        "why": "同步客户端自动传播变更",
+        "oldCapability": "减少自建远程存储的运维负担",
+        "oldLimit": "依赖服务提供方与账号安全",
+        "newCapability": "自动分发设备间的文件变更",
+        "newProblem": "误删也会同步，仍需要备份",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "cloud-storage-s4",
+        "toId": "cloud-storage-s5",
+        "type": "evolved_into",
+        "why": "文件共享进一步融合在线编辑与沟通",
+        "oldCapability": "自动分发设备间的文件变更",
+        "oldLimit": "误删也会同步，仍需要备份",
+        "newCapability": "在文件之上建立协作流程",
+        "newProblem": "权限和迁移复杂度上升",
+        "sourceIds": [
+          "nextcloud"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      }
+    ],
+    "resourceIds": [
+      "cloud-storage-r0"
+    ],
+    "sourceIds": [
+      "nextcloud"
+    ],
+    "failures": [],
+    "failureNote": "尚未补充经过来源核验的失败案例；不以推测填充。",
+    "frontier": {
+      "mature": [
+        "文件共享",
+        "自动同步"
+      ],
+      "growing": [
+        "隐私保护协作",
+        "恢复体验"
+      ],
+      "gaps": [
+        {
+          "title": "误删后的可理解恢复",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "多云迁移与校验",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "端到端加密下的协作体验",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        }
+      ]
+    },
+    "mode": "curated",
+    "updatedAt": "2026-09-27"
+  },
+  {
+    "id": "code-hosting",
+    "title": "代码托管",
+    "want": "我想管理团队代码并协同开发",
+    "need": "让代码变更可追踪、可合并，并可交付给其他人。",
+    "keywords": [
+      "代码",
+      "git",
+      "开源",
+      "开发者",
+      "code"
+    ],
+    "summary": "先继承已经成熟的能力，再把精力放在仍未解决的问题上。",
+    "nodes": [
+      {
+        "id": "code-hosting-s0",
+        "name": "本地版本记录",
+        "era": "早期路线",
+        "solves": "记录文件修改历史",
+        "limitation": "团队共享和合并困难",
+        "representative": "本地版本控制",
+        "sourceIds": [
+          "git"
+        ],
+        "lane": 0,
+        "stage": 0,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "变更历史减少人工备份的混乱"
+      },
+      {
+        "id": "code-hosting-s1",
+        "name": "集中式版本控制",
+        "era": "1990s 普及",
+        "solves": "共享统一仓库",
+        "limitation": "中央服务成为工作依赖",
+        "representative": "CVS / SVN",
+        "sourceIds": [
+          "git"
+        ],
+        "lane": 0,
+        "stage": 1,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "共享仓库协调团队改动"
+      },
+      {
+        "id": "code-hosting-s2",
+        "name": "分布式版本控制",
+        "era": "2005 · Git",
+        "solves": "让每个副本保有历史和分支能力",
+        "limitation": "学习与合并仍有门槛",
+        "representative": "Git",
+        "sourceIds": [
+          "git"
+        ],
+        "lane": 0,
+        "stage": 2,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "Linux 开发对速度和分布式的需求促成 Git"
+      },
+      {
+        "id": "code-hosting-s3",
+        "name": "自托管仓库",
+        "era": "并行路线",
+        "solves": "控制托管环境与数据",
+        "limitation": "需要独立维护基础设施",
+        "representative": "组织内 Git 服务",
+        "sourceIds": [
+          "git"
+        ],
+        "lane": 1,
+        "stage": 3,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "协议开放允许独立运行托管"
+      },
+      {
+        "id": "code-hosting-s4",
+        "name": "协作式代码托管",
+        "era": "当代路线",
+        "solves": "把评审与协作聚合到仓库",
+        "limitation": "平台迁移和工作流绑定",
+        "representative": "GitHub",
+        "sourceIds": [
+          "github"
+        ],
+        "lane": 0,
+        "stage": 4,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "评审与自动化围绕版本历史聚合"
+      },
+      {
+        "id": "code-hosting-s5",
+        "name": "AI 软件协作",
+        "era": "探索中",
+        "solves": "辅助理解与修改代码",
+        "limitation": "代码正确性和评审责任仍需保证",
+        "representative": "AI 开发工作流",
+        "sourceIds": [
+          "github"
+        ],
+        "lane": 0,
+        "stage": 5,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "生成模型开始参与开发流程，验证不能省略"
+      }
+    ],
+    "edges": [
+      {
+        "fromId": "code-hosting-s0",
+        "toId": "code-hosting-s1",
+        "type": "evolved_into",
+        "why": "共享仓库协调团队改动",
+        "oldCapability": "记录文件修改历史",
+        "oldLimit": "团队共享和合并困难",
+        "newCapability": "共享统一仓库",
+        "newProblem": "中央服务成为工作依赖",
+        "sourceIds": [
+          "git"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "code-hosting-s1",
+        "toId": "code-hosting-s2",
+        "type": "evolved_into",
+        "why": "Linux 开发对速度和分布式的需求促成 Git",
+        "oldCapability": "共享统一仓库",
+        "oldLimit": "中央服务成为工作依赖",
+        "newCapability": "让每个副本保有历史和分支能力",
+        "newProblem": "学习与合并仍有门槛",
+        "sourceIds": [
+          "git"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "code-hosting-s1",
+        "toId": "code-hosting-s3",
+        "type": "forked_into",
+        "why": "协议开放允许独立运行托管",
+        "oldCapability": "共享统一仓库",
+        "oldLimit": "中央服务成为工作依赖",
+        "newCapability": "控制托管环境与数据",
+        "newProblem": "需要独立维护基础设施",
+        "sourceIds": [
+          "git"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "code-hosting-s2",
+        "toId": "code-hosting-s4",
+        "type": "evolved_into",
+        "why": "评审与自动化围绕版本历史聚合",
+        "oldCapability": "让每个副本保有历史和分支能力",
+        "oldLimit": "学习与合并仍有门槛",
+        "newCapability": "把评审与协作聚合到仓库",
+        "newProblem": "平台迁移和工作流绑定",
+        "sourceIds": [
+          "github"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "code-hosting-s3",
+        "toId": "code-hosting-s4",
+        "type": "evolved_into",
+        "why": "评审与自动化围绕版本历史聚合",
+        "oldCapability": "控制托管环境与数据",
+        "oldLimit": "需要独立维护基础设施",
+        "newCapability": "把评审与协作聚合到仓库",
+        "newProblem": "平台迁移和工作流绑定",
+        "sourceIds": [
+          "github"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "code-hosting-s4",
+        "toId": "code-hosting-s5",
+        "type": "evolved_into",
+        "why": "生成模型开始参与开发流程，验证不能省略",
+        "oldCapability": "把评审与协作聚合到仓库",
+        "oldLimit": "平台迁移和工作流绑定",
+        "newCapability": "辅助理解与修改代码",
+        "newProblem": "代码正确性和评审责任仍需保证",
+        "sourceIds": [
+          "github"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      }
+    ],
+    "resourceIds": [
+      "code-hosting-r0",
+      "code-hosting-r1",
+      "code-hosting-r2"
+    ],
+    "sourceIds": [
+      "git",
+      "github",
+      "pages",
+      "education",
+      "google-code"
+    ],
+    "failures": [
+      {
+        "name": "Google Code",
+        "when": "2015–2016 · 关闭托管服务",
+        "promise": "为开源项目提供公共托管。",
+        "innovation": "让开发者集中分享项目并追踪工作。",
+        "outcome": "平台逐步转为只读并关闭。",
+        "reason": "官方说明大量项目迁移，剩余维护工作受到垃圾内容等问题影响。",
+        "lesson": "网络效应和维护结构值得研究；具体商业原因不能由公告之外自行推断。",
+        "sourceIds": [
+          "google-code"
+        ]
+      }
+    ],
+    "failureNote": "尚未补充经过来源核验的失败案例；不以推测填充。",
+    "frontier": {
+      "mature": [
+        "分支与合并",
+        "代码评审"
+      ],
+      "growing": [
+        "AI 代理协作",
+        "供应链可追溯性"
+      ],
+      "gaps": [
+        {
+          "title": "AI 变更的可审计性",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "跨平台工作流迁移",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "大规模变更的理解成本",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        }
+      ]
+    },
+    "mode": "curated",
+    "updatedAt": "2026-09-27"
+  },
+  {
+    "id": "video-conferencing",
+    "title": "视频会议",
+    "want": "我想建立远程视频会议",
+    "need": "让异地的人低摩擦地实时交流声音、画面与内容。",
+    "keywords": [
+      "会议",
+      "视频",
+      "音视频",
+      "video"
+    ],
+    "summary": "先继承已经成熟的能力，再把精力放在仍未解决的问题上。",
+    "nodes": [
+      {
+        "id": "video-conferencing-s0",
+        "name": "语音会议",
+        "era": "早期路线",
+        "solves": "远程实时交流声音",
+        "limitation": "缺少表情与画面信息",
+        "representative": "电话会议",
+        "sourceIds": [
+          "jitsi"
+        ],
+        "lane": 0,
+        "stage": 0,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "电信网络连接异地参与者"
+      },
+      {
+        "id": "video-conferencing-s1",
+        "name": "专用视频系统",
+        "era": "专用设备阶段",
+        "solves": "为会议提供远程画面",
+        "limitation": "部署与硬件门槛较高",
+        "representative": "会议室设备",
+        "sourceIds": [
+          "jitsi"
+        ],
+        "lane": 0,
+        "stage": 1,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "画面补充非语言信息"
+      },
+      {
+        "id": "video-conferencing-s2",
+        "name": "桌面视频软件",
+        "era": "个人电脑阶段",
+        "solves": "将音视频带到个人终端",
+        "limitation": "安装、网络与兼容性要求",
+        "representative": "桌面客户端",
+        "sourceIds": [
+          "jitsi"
+        ],
+        "lane": 0,
+        "stage": 2,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "终端计算与摄像头普及扩大可达性"
+      },
+      {
+        "id": "video-conferencing-s3",
+        "name": "浏览器实时通信",
+        "era": "并行路线",
+        "solves": "在浏览器中提供音视频",
+        "limitation": "网络连通与媒体质量仍需处理",
+        "representative": "WebRTC",
+        "sourceIds": [
+          "webrtc"
+        ],
+        "lane": 1,
+        "stage": 3,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "浏览器提供实时通信接口"
+      },
+      {
+        "id": "video-conferencing-s4",
+        "name": "云端会议服务",
+        "era": "当代路线",
+        "solves": "降低组织部署和加入会议的门槛",
+        "limitation": "依赖服务质量和数据策略",
+        "representative": "托管会议",
+        "sourceIds": [
+          "jitsi"
+        ],
+        "lane": 0,
+        "stage": 4,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "远程服务承接媒体分发与组织管理"
+      },
+      {
+        "id": "video-conferencing-s5",
+        "name": "可控的开源会议",
+        "era": "当代路线",
+        "solves": "自行控制会议部署与集成",
+        "limitation": "需要承担运维与容量规划",
+        "representative": "Jitsi Meet",
+        "sourceIds": [
+          "jitsi"
+        ],
+        "lane": 0,
+        "stage": 5,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "开源实现为定制与控制提供替代路线"
+      }
+    ],
+    "edges": [
+      {
+        "fromId": "video-conferencing-s0",
+        "toId": "video-conferencing-s1",
+        "type": "evolved_into",
+        "why": "画面补充非语言信息",
+        "oldCapability": "远程实时交流声音",
+        "oldLimit": "缺少表情与画面信息",
+        "newCapability": "为会议提供远程画面",
+        "newProblem": "部署与硬件门槛较高",
+        "sourceIds": [
+          "jitsi"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "video-conferencing-s1",
+        "toId": "video-conferencing-s2",
+        "type": "evolved_into",
+        "why": "终端计算与摄像头普及扩大可达性",
+        "oldCapability": "为会议提供远程画面",
+        "oldLimit": "部署与硬件门槛较高",
+        "newCapability": "将音视频带到个人终端",
+        "newProblem": "安装、网络与兼容性要求",
+        "sourceIds": [
+          "jitsi"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "video-conferencing-s1",
+        "toId": "video-conferencing-s3",
+        "type": "forked_into",
+        "why": "浏览器提供实时通信接口",
+        "oldCapability": "为会议提供远程画面",
+        "oldLimit": "部署与硬件门槛较高",
+        "newCapability": "在浏览器中提供音视频",
+        "newProblem": "网络连通与媒体质量仍需处理",
+        "sourceIds": [
+          "webrtc"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "video-conferencing-s2",
+        "toId": "video-conferencing-s4",
+        "type": "evolved_into",
+        "why": "远程服务承接媒体分发与组织管理",
+        "oldCapability": "将音视频带到个人终端",
+        "oldLimit": "安装、网络与兼容性要求",
+        "newCapability": "降低组织部署和加入会议的门槛",
+        "newProblem": "依赖服务质量和数据策略",
+        "sourceIds": [
+          "jitsi"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "video-conferencing-s3",
+        "toId": "video-conferencing-s4",
+        "type": "evolved_into",
+        "why": "远程服务承接媒体分发与组织管理",
+        "oldCapability": "在浏览器中提供音视频",
+        "oldLimit": "网络连通与媒体质量仍需处理",
+        "newCapability": "降低组织部署和加入会议的门槛",
+        "newProblem": "依赖服务质量和数据策略",
+        "sourceIds": [
+          "jitsi"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "video-conferencing-s4",
+        "toId": "video-conferencing-s5",
+        "type": "evolved_into",
+        "why": "开源实现为定制与控制提供替代路线",
+        "oldCapability": "降低组织部署和加入会议的门槛",
+        "oldLimit": "依赖服务质量和数据策略",
+        "newCapability": "自行控制会议部署与集成",
+        "newProblem": "需要承担运维与容量规划",
+        "sourceIds": [
+          "jitsi"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      }
+    ],
+    "resourceIds": [
+      "video-conferencing-r0"
+    ],
+    "sourceIds": [
+      "jitsi",
+      "webrtc"
+    ],
+    "failures": [],
+    "failureNote": "尚未补充经过来源核验的失败案例；不以推测填充。",
+    "frontier": {
+      "mature": [
+        "实时音视频",
+        "屏幕共享"
+      ],
+      "growing": [
+        "实时翻译",
+        "会议知识沉淀"
+      ],
+      "gaps": [
+        {
+          "title": "弱网络下的参与公平性",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "跨语言会议的准确理解",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "会议数据的可控保留",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        }
+      ]
+    },
+    "mode": "curated",
+    "updatedAt": "2026-09-27"
+  },
+  {
+    "id": "knowledge",
+    "title": "知识管理",
+    "want": "我想管理自己的知识资料",
+    "need": "把零散信息保存为可检索、可关联、可复用的知识。",
+    "keywords": [
+      "知识",
+      "笔记",
+      "资料",
+      "knowledge",
+      "note"
+    ],
+    "summary": "先继承已经成熟的能力，再把精力放在仍未解决的问题上。",
+    "nodes": [
+      {
+        "id": "knowledge-s0",
+        "name": "纸质笔记",
+        "era": "数字化之前",
+        "solves": "低门槛记录想法",
+        "limitation": "难以搜索和跨地点复制",
+        "representative": "笔记本",
+        "sourceIds": [
+          "web-history"
+        ],
+        "lane": 0,
+        "stage": 0,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "记录使经验不依赖记忆"
+      },
+      {
+        "id": "knowledge-s1",
+        "name": "数字文档",
+        "era": "个人电脑阶段",
+        "solves": "电子保存与全文检索",
+        "limitation": "信息关联常依赖文件目录",
+        "representative": "文本文件",
+        "sourceIds": [
+          "web-history"
+        ],
+        "lane": 0,
+        "stage": 1,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "数字化使搜索与复制可行"
+      },
+      {
+        "id": "knowledge-s2",
+        "name": "超文本与 Wiki",
+        "era": "超文本路线",
+        "solves": "用链接连接不同主题",
+        "limitation": "结构维护需要持续投入",
+        "representative": "Wiki",
+        "sourceIds": [
+          "web-history"
+        ],
+        "lane": 0,
+        "stage": 2,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "超文本把线性文档变成关联网络"
+      },
+      {
+        "id": "knowledge-s3",
+        "name": "本地知识库",
+        "era": "并行路线",
+        "solves": "保留对文件与离线访问的控制",
+        "limitation": "跨设备协作需要额外机制",
+        "representative": "Obsidian",
+        "sourceIds": [
+          "obsidian"
+        ],
+        "lane": 1,
+        "stage": 3,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "本地文件降低对单一远程服务的依赖"
+      },
+      {
+        "id": "knowledge-s4",
+        "name": "双向链接笔记",
+        "era": "当代路线",
+        "solves": "发现概念之间的连接",
+        "limitation": "链接本身不保证知识质量",
+        "representative": "Obsidian / Logseq",
+        "sourceIds": [
+          "obsidian"
+        ],
+        "lane": 0,
+        "stage": 4,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "反向链接帮助发现已有关系"
+      },
+      {
+        "id": "knowledge-s5",
+        "name": "AI 知识助手",
+        "era": "探索中",
+        "solves": "辅助从大量资料中提问和提炼",
+        "limitation": "答案需要来源与权限约束",
+        "representative": "检索增强工作流",
+        "sourceIds": [
+          "obsidian"
+        ],
+        "lane": 0,
+        "stage": 5,
+        "evidence": "概括性路线；时间为大致阶段，非首次发明断言",
+        "reason": "模型生成与检索结合，但需要检查原文"
+      }
+    ],
+    "edges": [
+      {
+        "fromId": "knowledge-s0",
+        "toId": "knowledge-s1",
+        "type": "evolved_into",
+        "why": "数字化使搜索与复制可行",
+        "oldCapability": "低门槛记录想法",
+        "oldLimit": "难以搜索和跨地点复制",
+        "newCapability": "电子保存与全文检索",
+        "newProblem": "信息关联常依赖文件目录",
+        "sourceIds": [
+          "web-history"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "knowledge-s1",
+        "toId": "knowledge-s2",
+        "type": "evolved_into",
+        "why": "超文本把线性文档变成关联网络",
+        "oldCapability": "电子保存与全文检索",
+        "oldLimit": "信息关联常依赖文件目录",
+        "newCapability": "用链接连接不同主题",
+        "newProblem": "结构维护需要持续投入",
+        "sourceIds": [
+          "web-history"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "knowledge-s1",
+        "toId": "knowledge-s3",
+        "type": "forked_into",
+        "why": "本地文件降低对单一远程服务的依赖",
+        "oldCapability": "电子保存与全文检索",
+        "oldLimit": "信息关联常依赖文件目录",
+        "newCapability": "保留对文件与离线访问的控制",
+        "newProblem": "跨设备协作需要额外机制",
+        "sourceIds": [
+          "obsidian"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "knowledge-s2",
+        "toId": "knowledge-s4",
+        "type": "evolved_into",
+        "why": "反向链接帮助发现已有关系",
+        "oldCapability": "用链接连接不同主题",
+        "oldLimit": "结构维护需要持续投入",
+        "newCapability": "发现概念之间的连接",
+        "newProblem": "链接本身不保证知识质量",
+        "sourceIds": [
+          "obsidian"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "knowledge-s3",
+        "toId": "knowledge-s4",
+        "type": "evolved_into",
+        "why": "反向链接帮助发现已有关系",
+        "oldCapability": "保留对文件与离线访问的控制",
+        "oldLimit": "跨设备协作需要额外机制",
+        "newCapability": "发现概念之间的连接",
+        "newProblem": "链接本身不保证知识质量",
+        "sourceIds": [
+          "obsidian"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      },
+      {
+        "fromId": "knowledge-s4",
+        "toId": "knowledge-s5",
+        "type": "evolved_into",
+        "why": "模型生成与检索结合，但需要检查原文",
+        "oldCapability": "发现概念之间的连接",
+        "oldLimit": "链接本身不保证知识质量",
+        "newCapability": "辅助从大量资料中提问和提炼",
+        "newProblem": "答案需要来源与权限约束",
+        "sourceIds": [
+          "obsidian"
+        ],
+        "evidence": "编辑综合解释，非单一因果定论"
+      }
+    ],
+    "resourceIds": [
+      "knowledge-r0",
+      "knowledge-r1"
+    ],
+    "sourceIds": [
+      "web-history",
+      "obsidian",
+      "logseq",
+      "desktop"
+    ],
+    "failures": [
+      {
+        "name": "Google Desktop",
+        "when": "2011 · 停止服务",
+        "promise": "让用户检索个人电脑上的信息。",
+        "innovation": "把搜索体验带到本地桌面。",
+        "outcome": "停止该产品与相关支持。",
+        "reason": "官方提到云端使用增长，以及现代操作系统的原生搜索能力。",
+        "lesson": "需求未消失，但执行地点和基础平台能力会改变独立产品的空间。",
+        "sourceIds": [
+          "desktop"
+        ]
+      }
+    ],
+    "failureNote": "尚未补充经过来源核验的失败案例；不以推测填充。",
+    "frontier": {
+      "mature": [
+        "本地保存",
+        "链接与搜索"
+      ],
+      "growing": [
+        "检索辅助写作",
+        "自动整理"
+      ],
+      "gaps": [
+        {
+          "title": "回答证据的完整性",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "跨工具无损迁移",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        },
+        {
+          "title": "长期知识维护成本",
+          "evidence": "从现有路线的限制推导的研究假设，尚未完成用户访谈验证。",
+          "experiment": "访谈 5 位目标用户，观察最近一次实际任务；用可用原型验证是否减少时间或错误。"
+        }
+      ]
+    },
+    "mode": "curated",
+    "updatedAt": "2026-09-27"
+  },
+  {
+    "id": "online-payments",
+    "title": "在线支付",
+    "want": "我想做一个在线支付系统",
+    "need": "让客户完成付款，并让商户可靠地确认订单与款项状态。",
+    "keywords": [
+      "支付",
+      "付款",
+      "收款",
+      "payment"
+    ],
+    "summary": "优先复用支付服务，验证业务流程与地区适配。",
+    "nodes": [
+      {
+        "id": "online-payments-s0",
+        "name": "银行转账",
+        "era": "概括性路线 · 非首发年代",
+        "solves": "跨账户转移资金",
+        "limitation": "交易与订单匹配需要额外流程",
+        "representative": "银行账户",
+        "sourceIds": [
+          "stripe"
+        ],
+        "lane": 0,
+        "stage": 0,
+        "evidence": "能力分类的编辑综合；所附来源说明现有能力，不证明历史首创。",
+        "reason": "账户网络提供转账基础"
+      },
+      {
+        "id": "online-payments-s1",
+        "name": "银行卡在线支付",
+        "era": "概括性路线 · 非首发年代",
+        "solves": "让持卡人在线完成购买",
+        "limitation": "商户需要处理集成与支付流程",
+        "representative": "银行卡网络",
+        "sourceIds": [
+          "stripe"
+        ],
+        "lane": 0,
+        "stage": 1,
+        "evidence": "能力分类的编辑综合；所附来源说明现有能力，不证明历史首创。",
+        "reason": "在线交易产生远程支付需求"
+      },
+      {
+        "id": "online-payments-s2",
+        "name": "支付网关",
+        "era": "概括性路线 · 非首发年代",
+        "solves": "把商户应用连接到支付处理",
+        "limitation": "多种渠道仍需协调",
+        "representative": "支付处理平台",
+        "sourceIds": [
+          "stripe"
+        ],
+        "lane": 0,
+        "stage": 2,
+        "evidence": "能力分类的编辑综合；所附来源说明现有能力，不证明历史首创。",
+        "reason": "标准接口帮助抽象不同处理环节"
+      },
+      {
+        "id": "online-payments-s3",
+        "name": "数字钱包",
+        "era": "概括性路线 · 非首发年代",
+        "solves": "复用已保存的支付身份",
+        "limitation": "钱包与地区支持有所不同",
+        "representative": "PayPal",
+        "sourceIds": [
+          "paypal"
+        ],
+        "lane": 1,
+        "stage": 3,
+        "evidence": "能力分类的编辑综合；所附来源说明现有能力，不证明历史首创。",
+        "reason": "重复支付希望减少输入步骤"
+      },
+      {
+        "id": "online-payments-s4",
+        "name": "托管结账",
+        "era": "概括性路线 · 非首发年代",
+        "solves": "减少商户自行构建结账界面的工作",
+        "limitation": "定制能力受提供方约束",
+        "representative": "托管 Checkout",
+        "sourceIds": [
+          "paypal"
+        ],
+        "lane": 0,
+        "stage": 4,
+        "evidence": "能力分类的编辑综合；所附来源说明现有能力，不证明历史首创。",
+        "reason": "成熟托管界面降低接入成本"
+      },
+      {
+        "id": "online-payments-s5",
+        "name": "支付基础设施 API",
+        "era": "概括性路线 · 非首发年代",
+        "solves": "在产品内组合支付与相关流程",
+        "limitation": "异步状态、退款与对账仍需正确设计",
+        "representative": "Stripe Payments",
+        "sourceIds": [
+          "stripe"
+        ],
+        "lane": 0,
+        "stage": 5,
+        "evidence": "能力分类的编辑综合；所附来源说明现有能力，不证明历史首创。",
+        "reason": "API 把成熟支付能力嵌入应用"
+      }
+    ],
+    "edges": [
+      {
+        "fromId": "online-payments-s0",
+        "toId": "online-payments-s1",
+        "type": "evolved_into",
+        "why": "在线交易产生远程支付需求",
+        "oldCapability": "跨账户转移资金",
+        "oldLimit": "交易与订单匹配需要额外流程",
+        "newCapability": "让持卡人在线完成购买",
+        "newProblem": "商户需要处理集成与支付流程",
+        "sourceIds": [
+          "stripe"
+        ],
+        "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+      },
+      {
+        "fromId": "online-payments-s1",
+        "toId": "online-payments-s2",
+        "type": "evolved_into",
+        "why": "标准接口帮助抽象不同处理环节",
+        "oldCapability": "让持卡人在线完成购买",
+        "oldLimit": "商户需要处理集成与支付流程",
+        "newCapability": "把商户应用连接到支付处理",
+        "newProblem": "多种渠道仍需协调",
+        "sourceIds": [
+          "stripe"
+        ],
+        "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+      },
+      {
+        "fromId": "online-payments-s1",
+        "toId": "online-payments-s3",
+        "type": "forked_into",
+        "why": "重复支付希望减少输入步骤",
+        "oldCapability": "让持卡人在线完成购买",
+        "oldLimit": "商户需要处理集成与支付流程",
+        "newCapability": "复用已保存的支付身份",
+        "newProblem": "钱包与地区支持有所不同",
+        "sourceIds": [
+          "paypal"
+        ],
+        "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+      },
+      {
+        "fromId": "online-payments-s2",
+        "toId": "online-payments-s4",
+        "type": "evolved_into",
+        "why": "成熟托管界面降低接入成本",
+        "oldCapability": "把商户应用连接到支付处理",
+        "oldLimit": "多种渠道仍需协调",
+        "newCapability": "减少商户自行构建结账界面的工作",
+        "newProblem": "定制能力受提供方约束",
+        "sourceIds": [
+          "paypal"
+        ],
+        "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+      },
+      {
+        "fromId": "online-payments-s3",
+        "toId": "online-payments-s4",
+        "type": "evolved_into",
+        "why": "成熟托管界面降低接入成本",
+        "oldCapability": "复用已保存的支付身份",
+        "oldLimit": "钱包与地区支持有所不同",
+        "newCapability": "减少商户自行构建结账界面的工作",
+        "newProblem": "定制能力受提供方约束",
+        "sourceIds": [
+          "paypal"
+        ],
+        "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+      },
+      {
+        "fromId": "online-payments-s4",
+        "toId": "online-payments-s5",
+        "type": "evolved_into",
+        "why": "API 把成熟支付能力嵌入应用",
+        "oldCapability": "减少商户自行构建结账界面的工作",
+        "oldLimit": "定制能力受提供方约束",
+        "newCapability": "在产品内组合支付与相关流程",
+        "newProblem": "异步状态、退款与对账仍需正确设计",
+        "sourceIds": [
+          "stripe"
+        ],
+        "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+      }
+    ],
+    "resourceIds": [
+      "online-payments-r0",
+      "online-payments-r1"
+    ],
+    "sourceIds": [
+      "stripe",
+      "paypal"
+    ],
+    "failures": [],
+    "failureNote": "尚未收录经过核验的关闭产品；不据此推断支付历史没有失败路线。",
+    "frontier": {
+      "mature": [
+        "托管结账",
+        "支付 API 集成"
+      ],
+      "growing": [
+        "多支付方式整合",
+        "嵌入式支付体验"
+      ],
+      "gaps": [
+        {
+          "title": "异步支付状态的可理解性",
+          "evidence": "从集成流程推导的假设，需通过真实订单场景验证。",
+          "experiment": "在沙箱中模拟成功、失败、延迟和退款，观察商户能否正确判断订单状态。"
+        },
+        {
+          "title": "跨提供方的对账工作流",
+          "evidence": "对不同系统组合成本的研究假设，不构成财务建议。",
+          "experiment": "访谈商户并比较现有服务，确认具体重复录入与核对步骤。"
+        }
+      ]
+    },
+    "mode": "curated",
+    "updatedAt": "2026-09-27"
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "web-history",
+    "name": "W3C · Web 历史",
+    "url": "https://www.w3.org/History.html",
+    "tier": "Official",
+    "description": "Web 从超文本研究走向开放发布的关键时间点。",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "mdn",
+    "name": "MDN · 服务端入门",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction",
+    "tier": "Professional",
+    "description": "理解静态页面和动态服务的能力区别。",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "pages",
+    "name": "GitHub Pages 文档",
+    "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
+    "tier": "Official",
+    "description": "静态网站发布的官方能力与使用条件。",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "git",
+    "name": "Pro Git · Git 简史",
+    "url": "https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git",
+    "tier": "Official",
+    "description": "Git 的设计背景与 2005 年起源。",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "wave",
+    "name": "Google · Wave 停止独立开发公告",
+    "url": "https://googleblog.blogspot.com/2010/08/update-on-google-wave.html",
+    "tier": "Original",
+    "description": "官方说明采用率未达预期，部分技术继续复用。",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "nextcloud",
+    "name": "Nextcloud · 内容协作平台",
+    "url": "https://nextcloud.com/content-collaboration-platform/",
+    "tier": "Official",
+    "description": "自托管文件与协作能力。",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "jitsi",
+    "name": "Jitsi · About",
+    "url": "https://jitsi.org/about/",
+    "tier": "Official",
+    "description": "开源视频会议的技术与项目入口。",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "stripe",
+    "name": "Stripe · Payments",
+    "url": "https://stripe.com/payments",
+    "tier": "Official",
+    "description": "支付基础设施的官方产品说明；地区和费率须另行核对。",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "obsidian",
+    "name": "Obsidian 官方网站",
+    "url": "https://obsidian.md/",
+    "tier": "Official",
+    "description": "本地知识库与关联笔记的产品能力。",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "docs",
+    "name": "Google Docs 官方网站",
+    "url": "https://workspace.google.com/products/docs/",
+    "tier": "Official",
+    "description": "在线文档的实时协作能力。",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "github",
+    "name": "GitHub 官方发布日志",
+    "url": "https://github.blog/changelog/",
+    "tier": "Official",
+    "description": "代码托管与开发者服务更新入口，未逐条核验。",
+    "checkedAt": null
+  },
+  {
+    "id": "education",
+    "name": "GitHub Education",
+    "url": "https://education.github.com/pack",
+    "tier": "Official",
+    "description": "学生开发者资源计划入口；资格与内容需实时核对。",
+    "checkedAt": null
+  },
+  {
+    "id": "webrtc",
+    "name": "WebRTC 项目文档",
+    "url": "https://webrtc.org/",
+    "tier": "Official",
+    "description": "浏览器实时音视频标准与实现入口，待复核。",
+    "checkedAt": null
+  },
+  {
+    "id": "etherpad",
+    "name": "Etherpad 项目",
+    "url": "https://etherpad.org/",
+    "tier": "Official",
+    "description": "开源协作编辑器入口，待复核。",
+    "checkedAt": null
+  },
+  {
+    "id": "wordpress",
+    "name": "WordPress 项目",
+    "url": "https://wordpress.org/",
+    "tier": "Official",
+    "description": "开源内容管理系统入口，待复核。",
+    "checkedAt": null
+  },
+  {
+    "id": "logseq",
+    "name": "Logseq 项目",
+    "url": "https://github.com/logseq/logseq",
+    "tier": "Original",
+    "description": "知识管理开源实现与版本记录，待复核。",
+    "checkedAt": null
+  },
+  {
+    "id": "google-code",
+    "name": "Google Code 停止服务公告",
+    "url": "https://opensource.googleblog.com/2015/03/farewell-to-google-code.html",
+    "description": "官方说明开发者迁移及维护状况。",
+    "tier": "Original",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "flash",
+    "name": "Adobe · Flash 与互动内容的未来",
+    "url": "https://blog.adobe.com/en/publish/2017/07/25/adobe-flash-update",
+    "description": "官方将开放标准演进作为停止 Flash 的背景。",
+    "tier": "Original",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "desktop",
+    "name": "Google · 产品清理公告",
+    "url": "https://googleblog.blogspot.com/2011/09/fall-spring-clean.html",
+    "description": "官方说明 Google Desktop 停止服务及使用环境变化。",
+    "tier": "Original",
+    "checkedAt": "2026-09-27"
+  },
+  {
+    "id": "paypal",
+    "name": "PayPal Checkout 集成文档",
+    "url": "https://developer.paypal.com/studio/checkout/standard/integrate",
+    "description": "支付集成官方文档；商户资格与地区支持需单独核对。",
+    "tier": "Official",
+    "checkedAt": "2026-09-27"
+  }
+]

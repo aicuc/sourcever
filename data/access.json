@@ -1,0 +1,164 @@
+[
+  {
+    "id": "website-r0-access",
+    "resourceId": "website-r0",
+    "how": "下载开源软件并选择主机；自行承担托管成本。",
+    "eligibility": "all",
+    "conditions": "遵循服务条款或开源许可证；部署和附加服务可能收费",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "wordpress",
+    "alternativeIds": []
+  },
+  {
+    "id": "website-r1-access",
+    "resourceId": "website-r1",
+    "how": "注册 GitHub，创建仓库，在 Pages 设置中选择发布来源。",
+    "eligibility": "all",
+    "conditions": "遵循服务条款或开源许可证；部署和附加服务可能收费",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "pages",
+    "alternativeIds": []
+  },
+  {
+    "id": "collaboration-r0-access",
+    "resourceId": "collaboration-r0",
+    "how": "使用 Google 账号创建文档；组织功能和区域可用性以官方为准。",
+    "eligibility": "all",
+    "conditions": "遵循服务条款或开源许可证；部署和附加服务可能收费",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "docs",
+    "alternativeIds": [
+      "collaboration-r2"
+    ]
+  },
+  {
+    "id": "collaboration-r1-access",
+    "resourceId": "collaboration-r1",
+    "how": "选择自建部署或服务商，配置存储和协作权限。",
+    "eligibility": "all",
+    "conditions": "遵循服务条款或开源许可证；部署和附加服务可能收费",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "nextcloud",
+    "alternativeIds": []
+  },
+  {
+    "id": "collaboration-r2-access",
+    "resourceId": "collaboration-r2",
+    "how": "部署开源编辑器，评估认证与访问控制。",
+    "eligibility": "all",
+    "conditions": "遵循服务条款或开源许可证；部署和附加服务可能收费",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "etherpad",
+    "alternativeIds": [
+      "collaboration-r0"
+    ]
+  },
+  {
+    "id": "cloud-storage-r0-access",
+    "resourceId": "cloud-storage-r0",
+    "how": "先配置服务器和客户端，再设置备份策略；同步不能替代备份。",
+    "eligibility": "all",
+    "conditions": "遵循服务条款或开源许可证；部署和附加服务可能收费",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "nextcloud",
+    "alternativeIds": []
+  },
+  {
+    "id": "code-hosting-r0-access",
+    "resourceId": "code-hosting-r0",
+    "how": "安装 Git，创建本地仓库并配置远程地址。",
+    "eligibility": "all",
+    "conditions": "遵循服务条款或开源许可证；部署和附加服务可能收费",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "git",
+    "alternativeIds": []
+  },
+  {
+    "id": "code-hosting-r1-access",
+    "resourceId": "code-hosting-r1",
+    "how": "使用仓库发布项目文档与静态站点。",
+    "eligibility": "all",
+    "conditions": "遵循服务条款或开源许可证；部署和附加服务可能收费",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "pages",
+    "alternativeIds": [
+      "code-hosting-r2"
+    ]
+  },
+  {
+    "id": "code-hosting-r2-access",
+    "resourceId": "code-hosting-r2",
+    "how": "前往 Education 提交学生资格证明；是否通过和优惠有效期以官方审核为准。",
+    "eligibility": "student",
+    "conditions": "在读身份需官方验证",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "education",
+    "alternativeIds": [
+      "code-hosting-r1"
+    ]
+  },
+  {
+    "id": "video-conferencing-r0-access",
+    "resourceId": "video-conferencing-r0",
+    "how": "从项目入口选择自建或可用实例；公开实例的条件单独核对。",
+    "eligibility": "all",
+    "conditions": "遵循服务条款或开源许可证；部署和附加服务可能收费",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "jitsi",
+    "alternativeIds": []
+  },
+  {
+    "id": "knowledge-r0-access",
+    "resourceId": "knowledge-r0",
+    "how": "下载客户端建立本地知识库；同步等附加服务单独核对价格。",
+    "eligibility": "all",
+    "conditions": "遵循服务条款或开源许可证；部署和附加服务可能收费",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "obsidian",
+    "alternativeIds": []
+  },
+  {
+    "id": "knowledge-r1-access",
+    "resourceId": "knowledge-r1",
+    "how": "查看项目版本与部署说明，建立自己的知识库。",
+    "eligibility": "all",
+    "conditions": "遵循服务条款或开源许可证；部署和附加服务可能收费",
+    "region": "未全面核验；请检查官方地区支持",
+    "window": "未核实统一截止日期",
+    "sourceId": "logseq",
+    "alternativeIds": []
+  },
+  {
+    "id": "online-payments-r0-access",
+    "resourceId": "online-payments-r0",
+    "how": "查看所在地区支持情况、商户审核要求与费用，先在沙箱环境完成集成。",
+    "eligibility": "all",
+    "conditions": "商户身份、业务类型和地区需由服务提供方审核；不是所有人均可开通",
+    "region": "受支持国家和地区限制；以官方商户准入为准",
+    "window": "未核实统一时间窗口",
+    "sourceId": "stripe",
+    "alternativeIds": []
+  },
+  {
+    "id": "online-payments-r1-access",
+    "resourceId": "online-payments-r1",
+    "how": "查看所在地区支持情况、商户审核要求与费用，先在沙箱环境完成集成。",
+    "eligibility": "all",
+    "conditions": "商户身份、业务类型和地区需由服务提供方审核；不是所有人均可开通",
+    "region": "受支持国家和地区限制；以官方商户准入为准",
+    "window": "未核实统一时间窗口",
+    "sourceId": "paypal",
+    "alternativeIds": []
+  }
+]

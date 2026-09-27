@@ -1,0 +1,1010 @@
+[
+  {
+    "fromId": "website",
+    "toId": "website-s0",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "website",
+    "toId": "website-s1",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "website",
+    "toId": "website-s2",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "website",
+    "toId": "website-s3",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "website",
+    "toId": "website-s4",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "website",
+    "toId": "website-s5",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "website-s1",
+    "toId": "website-s0",
+    "type": "evolved_from",
+    "why": "服务端处理使页面从文档变成应用",
+    "oldCapability": "让文档通过链接公开访问",
+    "oldLimit": "内容更新需要手动维护",
+    "newCapability": "按请求生成内容与处理表单",
+    "newProblem": "需要维护服务端和数据库",
+    "sourceIds": [
+      "mdn"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "website-s2",
+    "toId": "website-s1",
+    "type": "evolved_from",
+    "why": "内容与模板分离降低编辑门槛",
+    "oldCapability": "按请求生成内容与处理表单",
+    "oldLimit": "需要维护服务端和数据库",
+    "newCapability": "让非开发者维护网站内容",
+    "newProblem": "插件兼容与维护成本",
+    "sourceIds": [
+      "wordpress"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "website-s1",
+    "toId": "website-s3",
+    "type": "forked_into",
+    "why": "版本管理与自动部署减少手工发布",
+    "oldCapability": "按请求生成内容与处理表单",
+    "oldLimit": "需要维护服务端和数据库",
+    "newCapability": "从代码仓库发布静态页面",
+    "newProblem": "动态能力需要外部服务",
+    "sourceIds": [
+      "pages"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "website-s4",
+    "toId": "website-s2",
+    "type": "evolved_from",
+    "why": "API 分工让成熟能力可被组合",
+    "oldCapability": "让非开发者维护网站内容",
+    "oldLimit": "插件兼容与维护成本",
+    "newCapability": "把托管、内容和 API 组合成服务",
+    "newProblem": "跨服务权限与数据流更复杂",
+    "sourceIds": [
+      "mdn"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "website-s4",
+    "toId": "website-s3",
+    "type": "evolved_from",
+    "why": "API 分工让成熟能力可被组合",
+    "oldCapability": "从代码仓库发布静态页面",
+    "oldLimit": "动态能力需要外部服务",
+    "newCapability": "把托管、内容和 API 组合成服务",
+    "newProblem": "跨服务权限与数据流更复杂",
+    "sourceIds": [
+      "mdn"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "website-s5",
+    "toId": "website-s4",
+    "type": "evolved_from",
+    "why": "生成模型降低原型制作门槛，但可靠性仍需验证",
+    "oldCapability": "把托管、内容和 API 组合成服务",
+    "oldLimit": "跨服务权限与数据流更复杂",
+    "newCapability": "缩短从需求到页面的制作过程",
+    "newProblem": "生成结果仍需验收与维护",
+    "sourceIds": [
+      "mdn"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "website-s2",
+    "toId": "website-r0",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "website-r0",
+    "toId": "website-r0-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "website-r0",
+    "toId": "wordpress",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "website-s3",
+    "toId": "website-r1",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "website-r1",
+    "toId": "website-r1-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "website-r1",
+    "toId": "pages",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "collaboration",
+    "toId": "collaboration-s0",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "collaboration",
+    "toId": "collaboration-s1",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "collaboration",
+    "toId": "collaboration-s2",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "collaboration",
+    "toId": "collaboration-s3",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "collaboration",
+    "toId": "collaboration-s4",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "collaboration",
+    "toId": "collaboration-s5",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "collaboration-s1",
+    "toId": "collaboration-s0",
+    "type": "evolved_from",
+    "why": "共享存储减少散落副本",
+    "oldCapability": "跨地点交换文件",
+    "oldLimit": "副本增多，难以确认最终版本",
+    "newCapability": "集中存放团队文件",
+    "newProblem": "编辑与访问仍需协调",
+    "sourceIds": [
+      "nextcloud"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "collaboration-s2",
+    "toId": "collaboration-s1",
+    "type": "evolved_from",
+    "why": "浏览器编辑与同步使共同写作成为可能",
+    "oldCapability": "集中存放团队文件",
+    "oldLimit": "编辑与访问仍需协调",
+    "newCapability": "多人共同编辑同一份内容",
+    "newProblem": "离线能力和细粒度权限存在取舍",
+    "sourceIds": [
+      "docs"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "collaboration-s1",
+    "toId": "collaboration-s3",
+    "type": "forked_into",
+    "why": "开源部署满足组织的数据控制需求",
+    "oldCapability": "集中存放团队文件",
+    "oldLimit": "编辑与访问仍需协调",
+    "newCapability": "让组织掌握数据存放与部署",
+    "newProblem": "组织承担运维与升级工作",
+    "sourceIds": [
+      "nextcloud"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "collaboration-s4",
+    "toId": "collaboration-s2",
+    "type": "evolved_from",
+    "why": "单一文档扩展为团队内容工作流",
+    "oldCapability": "多人共同编辑同一份内容",
+    "oldLimit": "离线能力和细粒度权限存在取舍",
+    "newCapability": "整合文档、文件和沟通上下文",
+    "newProblem": "工具之间数据仍可能割裂",
+    "sourceIds": [
+      "nextcloud"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "collaboration-s4",
+    "toId": "collaboration-s3",
+    "type": "evolved_from",
+    "why": "单一文档扩展为团队内容工作流",
+    "oldCapability": "让组织掌握数据存放与部署",
+    "oldLimit": "组织承担运维与升级工作",
+    "newCapability": "整合文档、文件和沟通上下文",
+    "newProblem": "工具之间数据仍可能割裂",
+    "sourceIds": [
+      "nextcloud"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "collaboration-s5",
+    "toId": "collaboration-s4",
+    "type": "evolved_from",
+    "why": "生成模型引入摘要与内容辅助，判断责任仍在人",
+    "oldCapability": "整合文档、文件和沟通上下文",
+    "oldLimit": "工具之间数据仍可能割裂",
+    "newCapability": "辅助提炼和生成团队内容",
+    "newProblem": "出处、权限继承和事实核对",
+    "sourceIds": [
+      "docs"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "collaboration-s2",
+    "toId": "collaboration-r0",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "collaboration-r0",
+    "toId": "collaboration-r0-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "collaboration-r0",
+    "toId": "docs",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "collaboration-s3",
+    "toId": "collaboration-r1",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "collaboration-r1",
+    "toId": "collaboration-r1-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "collaboration-r1",
+    "toId": "nextcloud",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "collaboration-s2",
+    "toId": "collaboration-r2",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "collaboration-r2",
+    "toId": "collaboration-r2-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "collaboration-r2",
+    "toId": "etherpad",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "cloud-storage",
+    "toId": "cloud-storage-s0",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "cloud-storage",
+    "toId": "cloud-storage-s1",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "cloud-storage",
+    "toId": "cloud-storage-s2",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "cloud-storage",
+    "toId": "cloud-storage-s3",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "cloud-storage",
+    "toId": "cloud-storage-s4",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "cloud-storage",
+    "toId": "cloud-storage-s5",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "cloud-storage-s1",
+    "toId": "cloud-storage-s0",
+    "type": "evolved_from",
+    "why": "复制到独立介质降低单点故障",
+    "oldCapability": "在个人设备保存数据",
+    "oldLimit": "设备损坏可能导致数据丢失",
+    "newCapability": "保存额外恢复副本",
+    "newProblem": "手动执行容易遗漏",
+    "sourceIds": [
+      "nextcloud"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "cloud-storage-s2",
+    "toId": "cloud-storage-s1",
+    "type": "evolved_from",
+    "why": "局域网使存储可以共享",
+    "oldCapability": "保存额外恢复副本",
+    "oldLimit": "手动执行容易遗漏",
+    "newCapability": "让多台设备访问集中存储",
+    "newProblem": "依赖网络和管理员维护",
+    "sourceIds": [
+      "nextcloud"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "cloud-storage-s1",
+    "toId": "cloud-storage-s3",
+    "type": "forked_into",
+    "why": "远程服务把硬件维护交给提供方",
+    "oldCapability": "保存额外恢复副本",
+    "oldLimit": "手动执行容易遗漏",
+    "newCapability": "减少自建远程存储的运维负担",
+    "newProblem": "依赖服务提供方与账号安全",
+    "sourceIds": [
+      "nextcloud"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "cloud-storage-s4",
+    "toId": "cloud-storage-s2",
+    "type": "evolved_from",
+    "why": "同步客户端自动传播变更",
+    "oldCapability": "让多台设备访问集中存储",
+    "oldLimit": "依赖网络和管理员维护",
+    "newCapability": "自动分发设备间的文件变更",
+    "newProblem": "误删也会同步，仍需要备份",
+    "sourceIds": [
+      "nextcloud"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "cloud-storage-s4",
+    "toId": "cloud-storage-s3",
+    "type": "evolved_from",
+    "why": "同步客户端自动传播变更",
+    "oldCapability": "减少自建远程存储的运维负担",
+    "oldLimit": "依赖服务提供方与账号安全",
+    "newCapability": "自动分发设备间的文件变更",
+    "newProblem": "误删也会同步，仍需要备份",
+    "sourceIds": [
+      "nextcloud"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "cloud-storage-s5",
+    "toId": "cloud-storage-s4",
+    "type": "evolved_from",
+    "why": "文件共享进一步融合在线编辑与沟通",
+    "oldCapability": "自动分发设备间的文件变更",
+    "oldLimit": "误删也会同步，仍需要备份",
+    "newCapability": "在文件之上建立协作流程",
+    "newProblem": "权限和迁移复杂度上升",
+    "sourceIds": [
+      "nextcloud"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "cloud-storage-s4",
+    "toId": "cloud-storage-r0",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "cloud-storage-r0",
+    "toId": "cloud-storage-r0-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "cloud-storage-r0",
+    "toId": "nextcloud",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "code-hosting",
+    "toId": "code-hosting-s0",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "code-hosting",
+    "toId": "code-hosting-s1",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "code-hosting",
+    "toId": "code-hosting-s2",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "code-hosting",
+    "toId": "code-hosting-s3",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "code-hosting",
+    "toId": "code-hosting-s4",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "code-hosting",
+    "toId": "code-hosting-s5",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "code-hosting-s1",
+    "toId": "code-hosting-s0",
+    "type": "evolved_from",
+    "why": "共享仓库协调团队改动",
+    "oldCapability": "记录文件修改历史",
+    "oldLimit": "团队共享和合并困难",
+    "newCapability": "共享统一仓库",
+    "newProblem": "中央服务成为工作依赖",
+    "sourceIds": [
+      "git"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "code-hosting-s2",
+    "toId": "code-hosting-s1",
+    "type": "evolved_from",
+    "why": "Linux 开发对速度和分布式的需求促成 Git",
+    "oldCapability": "共享统一仓库",
+    "oldLimit": "中央服务成为工作依赖",
+    "newCapability": "让每个副本保有历史和分支能力",
+    "newProblem": "学习与合并仍有门槛",
+    "sourceIds": [
+      "git"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "code-hosting-s1",
+    "toId": "code-hosting-s3",
+    "type": "forked_into",
+    "why": "协议开放允许独立运行托管",
+    "oldCapability": "共享统一仓库",
+    "oldLimit": "中央服务成为工作依赖",
+    "newCapability": "控制托管环境与数据",
+    "newProblem": "需要独立维护基础设施",
+    "sourceIds": [
+      "git"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "code-hosting-s4",
+    "toId": "code-hosting-s2",
+    "type": "evolved_from",
+    "why": "评审与自动化围绕版本历史聚合",
+    "oldCapability": "让每个副本保有历史和分支能力",
+    "oldLimit": "学习与合并仍有门槛",
+    "newCapability": "把评审与协作聚合到仓库",
+    "newProblem": "平台迁移和工作流绑定",
+    "sourceIds": [
+      "github"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "code-hosting-s4",
+    "toId": "code-hosting-s3",
+    "type": "evolved_from",
+    "why": "评审与自动化围绕版本历史聚合",
+    "oldCapability": "控制托管环境与数据",
+    "oldLimit": "需要独立维护基础设施",
+    "newCapability": "把评审与协作聚合到仓库",
+    "newProblem": "平台迁移和工作流绑定",
+    "sourceIds": [
+      "github"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "code-hosting-s5",
+    "toId": "code-hosting-s4",
+    "type": "evolved_from",
+    "why": "生成模型开始参与开发流程，验证不能省略",
+    "oldCapability": "把评审与协作聚合到仓库",
+    "oldLimit": "平台迁移和工作流绑定",
+    "newCapability": "辅助理解与修改代码",
+    "newProblem": "代码正确性和评审责任仍需保证",
+    "sourceIds": [
+      "github"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "code-hosting-s2",
+    "toId": "code-hosting-r0",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "code-hosting-r0",
+    "toId": "code-hosting-r0-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "code-hosting-r0",
+    "toId": "git",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "code-hosting-s4",
+    "toId": "code-hosting-r1",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "code-hosting-r1",
+    "toId": "code-hosting-r1-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "code-hosting-r1",
+    "toId": "pages",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "code-hosting-s4",
+    "toId": "code-hosting-r2",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "code-hosting-r2",
+    "toId": "code-hosting-r2-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "code-hosting-r2",
+    "toId": "education",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "video-conferencing",
+    "toId": "video-conferencing-s0",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "video-conferencing",
+    "toId": "video-conferencing-s1",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "video-conferencing",
+    "toId": "video-conferencing-s2",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "video-conferencing",
+    "toId": "video-conferencing-s3",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "video-conferencing",
+    "toId": "video-conferencing-s4",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "video-conferencing",
+    "toId": "video-conferencing-s5",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "video-conferencing-s1",
+    "toId": "video-conferencing-s0",
+    "type": "evolved_from",
+    "why": "画面补充非语言信息",
+    "oldCapability": "远程实时交流声音",
+    "oldLimit": "缺少表情与画面信息",
+    "newCapability": "为会议提供远程画面",
+    "newProblem": "部署与硬件门槛较高",
+    "sourceIds": [
+      "jitsi"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "video-conferencing-s2",
+    "toId": "video-conferencing-s1",
+    "type": "evolved_from",
+    "why": "终端计算与摄像头普及扩大可达性",
+    "oldCapability": "为会议提供远程画面",
+    "oldLimit": "部署与硬件门槛较高",
+    "newCapability": "将音视频带到个人终端",
+    "newProblem": "安装、网络与兼容性要求",
+    "sourceIds": [
+      "jitsi"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "video-conferencing-s1",
+    "toId": "video-conferencing-s3",
+    "type": "forked_into",
+    "why": "浏览器提供实时通信接口",
+    "oldCapability": "为会议提供远程画面",
+    "oldLimit": "部署与硬件门槛较高",
+    "newCapability": "在浏览器中提供音视频",
+    "newProblem": "网络连通与媒体质量仍需处理",
+    "sourceIds": [
+      "webrtc"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "video-conferencing-s4",
+    "toId": "video-conferencing-s2",
+    "type": "evolved_from",
+    "why": "远程服务承接媒体分发与组织管理",
+    "oldCapability": "将音视频带到个人终端",
+    "oldLimit": "安装、网络与兼容性要求",
+    "newCapability": "降低组织部署和加入会议的门槛",
+    "newProblem": "依赖服务质量和数据策略",
+    "sourceIds": [
+      "jitsi"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "video-conferencing-s4",
+    "toId": "video-conferencing-s3",
+    "type": "evolved_from",
+    "why": "远程服务承接媒体分发与组织管理",
+    "oldCapability": "在浏览器中提供音视频",
+    "oldLimit": "网络连通与媒体质量仍需处理",
+    "newCapability": "降低组织部署和加入会议的门槛",
+    "newProblem": "依赖服务质量和数据策略",
+    "sourceIds": [
+      "jitsi"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "video-conferencing-s5",
+    "toId": "video-conferencing-s4",
+    "type": "evolved_from",
+    "why": "开源实现为定制与控制提供替代路线",
+    "oldCapability": "降低组织部署和加入会议的门槛",
+    "oldLimit": "依赖服务质量和数据策略",
+    "newCapability": "自行控制会议部署与集成",
+    "newProblem": "需要承担运维与容量规划",
+    "sourceIds": [
+      "jitsi"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "video-conferencing-s5",
+    "toId": "video-conferencing-r0",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "video-conferencing-r0",
+    "toId": "video-conferencing-r0-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "video-conferencing-r0",
+    "toId": "jitsi",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "knowledge",
+    "toId": "knowledge-s0",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "knowledge",
+    "toId": "knowledge-s1",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "knowledge",
+    "toId": "knowledge-s2",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "knowledge",
+    "toId": "knowledge-s3",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "knowledge",
+    "toId": "knowledge-s4",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "knowledge",
+    "toId": "knowledge-s5",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "knowledge-s1",
+    "toId": "knowledge-s0",
+    "type": "evolved_from",
+    "why": "数字化使搜索与复制可行",
+    "oldCapability": "低门槛记录想法",
+    "oldLimit": "难以搜索和跨地点复制",
+    "newCapability": "电子保存与全文检索",
+    "newProblem": "信息关联常依赖文件目录",
+    "sourceIds": [
+      "web-history"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "knowledge-s2",
+    "toId": "knowledge-s1",
+    "type": "evolved_from",
+    "why": "超文本把线性文档变成关联网络",
+    "oldCapability": "电子保存与全文检索",
+    "oldLimit": "信息关联常依赖文件目录",
+    "newCapability": "用链接连接不同主题",
+    "newProblem": "结构维护需要持续投入",
+    "sourceIds": [
+      "web-history"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "knowledge-s1",
+    "toId": "knowledge-s3",
+    "type": "forked_into",
+    "why": "本地文件降低对单一远程服务的依赖",
+    "oldCapability": "电子保存与全文检索",
+    "oldLimit": "信息关联常依赖文件目录",
+    "newCapability": "保留对文件与离线访问的控制",
+    "newProblem": "跨设备协作需要额外机制",
+    "sourceIds": [
+      "obsidian"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "knowledge-s4",
+    "toId": "knowledge-s2",
+    "type": "evolved_from",
+    "why": "反向链接帮助发现已有关系",
+    "oldCapability": "用链接连接不同主题",
+    "oldLimit": "结构维护需要持续投入",
+    "newCapability": "发现概念之间的连接",
+    "newProblem": "链接本身不保证知识质量",
+    "sourceIds": [
+      "obsidian"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "knowledge-s4",
+    "toId": "knowledge-s3",
+    "type": "evolved_from",
+    "why": "反向链接帮助发现已有关系",
+    "oldCapability": "保留对文件与离线访问的控制",
+    "oldLimit": "跨设备协作需要额外机制",
+    "newCapability": "发现概念之间的连接",
+    "newProblem": "链接本身不保证知识质量",
+    "sourceIds": [
+      "obsidian"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "knowledge-s5",
+    "toId": "knowledge-s4",
+    "type": "evolved_from",
+    "why": "模型生成与检索结合，但需要检查原文",
+    "oldCapability": "发现概念之间的连接",
+    "oldLimit": "链接本身不保证知识质量",
+    "newCapability": "辅助从大量资料中提问和提炼",
+    "newProblem": "答案需要来源与权限约束",
+    "sourceIds": [
+      "obsidian"
+    ],
+    "evidence": "编辑综合解释，非单一因果定论"
+  },
+  {
+    "fromId": "knowledge-s3",
+    "toId": "knowledge-r0",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "knowledge-r0",
+    "toId": "knowledge-r0-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "knowledge-r0",
+    "toId": "obsidian",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "knowledge-s4",
+    "toId": "knowledge-r1",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "knowledge-r1",
+    "toId": "knowledge-r1-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "knowledge-r1",
+    "toId": "logseq",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "online-payments",
+    "toId": "online-payments-s0",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "online-payments",
+    "toId": "online-payments-s1",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "online-payments",
+    "toId": "online-payments-s2",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "online-payments",
+    "toId": "online-payments-s3",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "online-payments",
+    "toId": "online-payments-s4",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "online-payments",
+    "toId": "online-payments-s5",
+    "type": "solved_by"
+  },
+  {
+    "fromId": "online-payments-s1",
+    "toId": "online-payments-s0",
+    "type": "evolved_from",
+    "why": "在线交易产生远程支付需求",
+    "oldCapability": "跨账户转移资金",
+    "oldLimit": "交易与订单匹配需要额外流程",
+    "newCapability": "让持卡人在线完成购买",
+    "newProblem": "商户需要处理集成与支付流程",
+    "sourceIds": [
+      "stripe"
+    ],
+    "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+  },
+  {
+    "fromId": "online-payments-s2",
+    "toId": "online-payments-s1",
+    "type": "evolved_from",
+    "why": "标准接口帮助抽象不同处理环节",
+    "oldCapability": "让持卡人在线完成购买",
+    "oldLimit": "商户需要处理集成与支付流程",
+    "newCapability": "把商户应用连接到支付处理",
+    "newProblem": "多种渠道仍需协调",
+    "sourceIds": [
+      "stripe"
+    ],
+    "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+  },
+  {
+    "fromId": "online-payments-s1",
+    "toId": "online-payments-s3",
+    "type": "forked_into",
+    "why": "重复支付希望减少输入步骤",
+    "oldCapability": "让持卡人在线完成购买",
+    "oldLimit": "商户需要处理集成与支付流程",
+    "newCapability": "复用已保存的支付身份",
+    "newProblem": "钱包与地区支持有所不同",
+    "sourceIds": [
+      "paypal"
+    ],
+    "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+  },
+  {
+    "fromId": "online-payments-s4",
+    "toId": "online-payments-s2",
+    "type": "evolved_from",
+    "why": "成熟托管界面降低接入成本",
+    "oldCapability": "把商户应用连接到支付处理",
+    "oldLimit": "多种渠道仍需协调",
+    "newCapability": "减少商户自行构建结账界面的工作",
+    "newProblem": "定制能力受提供方约束",
+    "sourceIds": [
+      "paypal"
+    ],
+    "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+  },
+  {
+    "fromId": "online-payments-s4",
+    "toId": "online-payments-s3",
+    "type": "evolved_from",
+    "why": "成熟托管界面降低接入成本",
+    "oldCapability": "复用已保存的支付身份",
+    "oldLimit": "钱包与地区支持有所不同",
+    "newCapability": "减少商户自行构建结账界面的工作",
+    "newProblem": "定制能力受提供方约束",
+    "sourceIds": [
+      "paypal"
+    ],
+    "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+  },
+  {
+    "fromId": "online-payments-s5",
+    "toId": "online-payments-s4",
+    "type": "evolved_from",
+    "why": "API 把成熟支付能力嵌入应用",
+    "oldCapability": "减少商户自行构建结账界面的工作",
+    "oldLimit": "定制能力受提供方约束",
+    "newCapability": "在产品内组合支付与相关流程",
+    "newProblem": "异步状态、退款与对账仍需正确设计",
+    "sourceIds": [
+      "stripe"
+    ],
+    "evidence": "编辑综合，不代表唯一历史顺序或直接继承"
+  },
+  {
+    "fromId": "online-payments-s5",
+    "toId": "online-payments-r0",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "online-payments-r0",
+    "toId": "online-payments-r0-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "online-payments-r0",
+    "toId": "stripe",
+    "type": "documented_at"
+  },
+  {
+    "fromId": "online-payments-s4",
+    "toId": "online-payments-r1",
+    "type": "implemented_by"
+  },
+  {
+    "fromId": "online-payments-r1",
+    "toId": "online-payments-r1-access",
+    "type": "accessible_via"
+  },
+  {
+    "fromId": "online-payments-r1",
+    "toId": "paypal",
+    "type": "documented_at"
+  }
+]
