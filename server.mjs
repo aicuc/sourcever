@@ -1,15 +1,12 @@
 import http from 'node:http';
+import { findCase } from './web/match.mjs';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { validateCase } from './web/schema.mjs';
 const root = path.dirname(fileURLToPath(import.meta.url));
 export const db = Object.fromEntries(await Promise.all(['cases','resources','sources','access'].map(async name => [name, JSON.parse(await readFile(path.join(root,'data',name+'.json'),'utf8'))])));
-export function matchCase(query) {
- const q=query.toLowerCase();
- const ranked=db.cases.map(c=>[c,c.keywords.reduce((n,k)=>n+(q.includes(k)?k.length:0),0)]).sort((a,b)=>b[1]-a[1]);
- return ranked[0]?.[1]>0?ranked[0][0]:null;
-}
+export function matchCase(query) { return findCase(db.cases, query); }
 const configured=()=>Boolean(process.env.AI_API_KEY && process.env.AI_MODEL);
 const json=(res,status,data)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});res.end(JSON.stringify(data));};
 async function body(req) {
@@ -50,7 +47,7 @@ export function createServer(){return http.createServer(async(req,res)=>{
   try{return json(res,200,await analyze(input.query.trim()));}catch(err){return json(res,err.status===429?429:502,{error:err.name==='TimeoutError'?'分析超时，请稍后重试':err.status===429?err.message:'模型分析失败或结果结构不完整，请稍后重试。',code:'PROVIDER_ERROR'});}
  }
  if(req.method!=='GET'&&req.method!=='HEAD')return json(res,405,{error:'不支持的方法'});
- const publicFiles={'/':'index.html','/app.mjs':'app.mjs','/styles.css':'styles.css','/schema.mjs':'schema.mjs','/favicon.svg':'favicon.svg'};
+ const publicFiles={'/':'index.html','/app.mjs':'app.mjs','/styles.css':'styles.css','/schema.mjs':'schema.mjs','/favicon.svg':'favicon.svg','/transport.mjs':'transport.mjs','/match.mjs':'match.mjs'};
  const file=publicFiles[url.pathname];if(!file)return json(res,404,{error:'页面不存在'});
  const content=await readFile(path.join(root,'web',file));const mime={'.html':'text/html','.mjs':'text/javascript','.css':'text/css','.svg':'image/svg+xml'};
  res.writeHead(200,{'Content-Type':mime[path.extname(file)]+'; charset=utf-8'});res.end(req.method==='HEAD'?undefined:content);
